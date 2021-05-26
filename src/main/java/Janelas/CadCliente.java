@@ -15,12 +15,18 @@ import javax.swing.JOptionPane;
  * @author Danilo Arantes <danilo at daniloarantes.com>
  */
 public class CadCliente extends javax.swing.JFrame {
+    Cliente cli = new Cliente();
 
     /**
      * Creates new form CadCliente
      */
     public CadCliente() {
         initComponents();
+    }
+
+    public CadCliente(Cliente cli) {
+        initComponents();
+        this.cli = cli;
     }
 
     /**
@@ -92,7 +98,7 @@ public class CadCliente extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 84, Short.MAX_VALUE))
+                        .addGap(0, 274, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +131,7 @@ public class CadCliente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 350, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBCadastrar)
                     .addComponent(jBLimpar))
@@ -157,7 +163,6 @@ public class CadCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        Cliente cli = new Cliente();
         
         cli.setNome(jTNome.getText());
         cli.setEndereco(jTEndereco.getText());

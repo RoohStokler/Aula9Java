@@ -10,20 +10,21 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Danilo Arantes <danilo at daniloarantes.com>
+ * @author Rodolfo Dias <Rodolfo at RoohStokler.com>
  */
 public class CadVeiculo extends javax.swing.JFrame {
-     Veiculo vei = new Veiculo();
+
+    Veiculo vei = new Veiculo();
+
     /**
      * Creates new form CadVeiculo
      */
     public CadVeiculo() {
-        initComponents();        
+        initComponents();
     }
-    
-    
+
     // Sobrecarga de Métodos
-    public CadVeiculo(Veiculo vei){
+    public CadVeiculo(Veiculo vei) {
         initComponents();
         this.vei = vei;
     }
@@ -149,16 +150,20 @@ public class CadVeiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-       
-        vei.setFabricante(jTFab.getText());
-        vei.setModelo(jTModelo.getText());
-        vei.setPreco(Double.parseDouble(jTPreco.getText()));
-        
-        String dados = "\n" + jTFab.getText() + " \n"
-                + jTModelo.getText() + "\n"
-                + jTPreco.getText();
-        
-        JOptionPane.showMessageDialog(this, "Veículo cadastrado com sucesso!\n" + dados);
+
+        try {
+            vei.setFabricante(jTFab.getText());
+            vei.setModelo(jTModelo.getText());
+            vei.setPreco(Double.parseDouble(jTPreco.getText()));
+
+            String dados = "\n" + jTFab.getText() + " \n"
+                    + jTModelo.getText() + "\n"
+                    + jTPreco.getText();
+
+            JOptionPane.showMessageDialog(this, "Veículo cadastrado com sucesso!\n" + dados);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Preencha os dados corretamente");
+        }
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
