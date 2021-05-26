@@ -7,7 +7,7 @@ package Objetos;
 
 /**
  *
- * @author Danilo Arantes <danilo at daniloarantes.com>
+ * @author Rodolfo <Rodolfo at RoohStokler.com>
  */
 public class Cliente { 
     private String nome;
